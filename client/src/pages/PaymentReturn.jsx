@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router'
 import { Alert, Button, Spin } from 'antd'
 
+const BACKEND_BASE_URL = import.meta.env.VITE_BACKEND_BASE_URL;
+
 const PaymentReturn = () => {
     const [isLoading, setIsLoading] = useState(true)
     const [status, setStatus] = useState(null)
