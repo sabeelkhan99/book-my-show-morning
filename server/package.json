@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
+    "start": "dotenvx run -- node src/server.js",
     "dev": "dotenvx run -- nodemon src/server.js",
     "seed-movies": "dotenvx run -- node src/seeds/movies.js"
   },
