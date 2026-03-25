@@ -9,6 +9,8 @@ const stripePromise = loadStripe(
     import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY
 )
 
+const BACKEND_BASE_URL = import.meta.env.VITE_BACKEND_BASE_URL;
+
 const Checkout = () => {
     const location = useLocation()
     const navigate = useNavigate()
@@ -24,7 +26,7 @@ const Checkout = () => {
         }
 
         try {
-            const res = await fetch('http://localhost:8080/payments', {
+            const res = await fetch(`${BACKEND_BASE_URL}/payments`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -23,7 +23,7 @@ const PaymentReturn = () => {
 
         const fetchStatus = async () => {
             try {
-                const res = await fetch(`http://localhost:8080/payments/${sessionId}`, {
+                const res = await fetch(`${BACKEND_BASE_URL}/payments/${sessionId}`, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`,
                     },
